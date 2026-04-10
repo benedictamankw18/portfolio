@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Benedicta Mankw – Full Stack Developer Portfolio" />
+  <title>Benedicta Mankw | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">B<span>.</span>Mankw</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="hero-tag">👋 Welcome to my portfolio</span>
+        <h1>Hi, I'm <span>Benedicta<br>Mankw</span></h1>
+        <p class="hero-role"><span id="typed"></span><span class="typed-cursor">|</span></p>
+        <p class="hero-desc">
+          I build beautiful, fast and accessible digital experiences.
+          Passionate about clean code, great design and meaningful products.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/benedictamankw18" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="mailto:benedicta@example.com" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-avatar">🧑‍💻</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-stats">
+          <div class="stat-card fade-in">
+            <div class="stat-number" data-target="3" data-suffix="+">0+</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-number" data-target="20" data-suffix="+">0+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-number" data-target="15" data-suffix="+">0+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-number" data-target="5" data-suffix="">0</div>
+            <div class="stat-label">Open Source Contributions</div>
+          </div>
+        </div>
+        <div class="about-text fade-in">
+          <h2 class="section-title">About <span>Me</span></h2>
+          <p class="section-subtitle">A little bit about who I am</p>
+          <p>
+            I'm a passionate Full Stack Developer with a love for turning complex problems
+            into simple, beautiful and intuitive solutions. I enjoy every step of the
+            design-to-development process — from wireframing UIs to deploying APIs.
+          </p>
+          <p>
+            When I'm not coding, you'll find me exploring new technologies, contributing
+            to open source, or mentoring aspiring developers in my community.
+          </p>
+          <div class="about-info">
+            <div class="info-item">
+              <span class="info-label">Name</span>
+              <span class="info-value">Benedicta Mankw</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Email</span>
+              <span class="info-value">benedicta@example.com</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Location</span>
+              <span class="info-value">Available Remotely</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Status</span>
+              <span class="info-value" style="color: #00c853;">✔ Open to Work</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary">Hire Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title">My <span>Skills</span></h2>
+      <p class="section-subtitle">Technologies I work with</p>
+
+      <div class="skills-categories">
+        <button class="category-btn active" data-cat="all">All</button>
+        <button class="category-btn" data-cat="frontend">Frontend</button>
+        <button class="category-btn" data-cat="backend">Backend</button>
+        <button class="category-btn" data-cat="tools">Tools</button>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card fade-in" data-cat="frontend">
+          <div class="skill-icon">🌐</div>
+          <div class="skill-name">HTML5</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="frontend">
+          <div class="skill-icon">🎨</div>
+          <div class="skill-name">CSS3</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="frontend">
+          <div class="skill-icon">⚡</div>
+          <div class="skill-name">JavaScript</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="frontend">
+          <div class="skill-icon">⚛️</div>
+          <div class="skill-name">React</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="frontend">
+          <div class="skill-icon">💠</div>
+          <div class="skill-name">TypeScript</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="frontend">
+          <div class="skill-icon">🟢</div>
+          <div class="skill-name">Vue.js</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="backend">
+          <div class="skill-icon">🟩</div>
+          <div class="skill-name">Node.js</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="backend">
+          <div class="skill-icon">🐍</div>
+          <div class="skill-name">Python</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="backend">
+          <div class="skill-icon">🗄️</div>
+          <div class="skill-name">PostgreSQL</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="backend">
+          <div class="skill-icon">🍃</div>
+          <div class="skill-name">MongoDB</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="backend">
+          <div class="skill-icon">🔴</div>
+          <div class="skill-name">Express.js</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="tools">
+          <div class="skill-icon">🐳</div>
+          <div class="skill-name">Docker</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="tools">
+          <div class="skill-icon">🐱</div>
+          <div class="skill-name">Git & GitHub</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="tools">
+          <div class="skill-icon">☁️</div>
+          <div class="skill-name">AWS / Cloud</div>
+        </div>
+        <div class="skill-card fade-in" data-cat="tools">
+          <div class="skill-icon">🎭</div>
+          <div class="skill-name">Figma</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured <span>Projects</span></h2>
+      <p class="section-subtitle">Some things I've built</p>
+
+      <div class="projects-grid">
+
+        <div class="project-card fade-in">
+          <div class="project-thumb">🛒</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">MongoDB</span>
+            </div>
+            <h3 class="project-title">E-Commerce Platform</h3>
+            <p class="project-desc">
+              A full-featured online store with product management, cart, payments
+              and real-time order tracking.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View live demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+              <a href="#" class="project-link" aria-label="View source code">
+                <i class="fa-brands fa-github"></i> Source
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-thumb">💬</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Vue.js</span>
+              <span class="project-tag">Firebase</span>
+              <span class="project-tag">WebSockets</span>
+            </div>
+            <h3 class="project-title">Real-Time Chat App</h3>
+            <p class="project-desc">
+              A messenger-style chat application supporting direct messages,
+              group rooms and emoji reactions.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View live demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+              <a href="#" class="project-link" aria-label="View source code">
+                <i class="fa-brands fa-github"></i> Source
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-thumb">📊</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">PostgreSQL</span>
+            </div>
+            <h3 class="project-title">Analytics Dashboard</h3>
+            <p class="project-desc">
+              A data visualisation dashboard with real-time charts, KPI tracking
+              and customisable widget layouts.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View live demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+              <a href="#" class="project-link" aria-label="View source code">
+                <i class="fa-brands fa-github"></i> Source
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-thumb">📝</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Tailwind</span>
+            </div>
+            <h3 class="project-title">Blog Platform</h3>
+            <p class="project-desc">
+              A modern blogging platform with markdown support, SEO optimization,
+              dark mode and commenting system.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View live demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+              <a href="#" class="project-link" aria-label="View source code">
+                <i class="fa-brands fa-github"></i> Source
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-thumb">🌤️</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">REST API</span>
+            </div>
+            <h3 class="project-title">Weather App</h3>
+            <p class="project-desc">
+              A clean, location-aware weather application with 7-day forecasts,
+              animated icons and geolocation support.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View live demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+              <a href="#" class="project-link" aria-label="View source code">
+                <i class="fa-brands fa-github"></i> Source
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-thumb">🤖</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">OpenAI API</span>
+              <span class="project-tag">FastAPI</span>
+            </div>
+            <h3 class="project-title">AI Chat Assistant</h3>
+            <p class="project-desc">
+              A context-aware AI assistant with memory, document upload and
+              multi-turn conversation support.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View live demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+              <a href="#" class="project-link" aria-label="View source code">
+                <i class="fa-brands fa-github"></i> Source
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <p class="section-subtitle">Let's work together or just say hi!</p>
+
+      <div class="contact-inner">
+        <div class="contact-info fade-in">
+          <h3>Let's talk about your project</h3>
+          <p>
+            I'm currently available for freelance work and full-time opportunities.
+            Have a project in mind or just want to connect? Drop me a message!
+          </p>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-detail">
+              <span>Email</span>
+              <a href="mailto:benedicta@example.com">benedicta@example.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="contact-detail">
+              <span>GitHub</span>
+              <a href="https://github.com/benedictamankw18" target="_blank" rel="noopener">
+                github.com/benedictamankw18
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="contact-detail">
+              <span>LinkedIn</span>
+              <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin.com/in/benedicta</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-detail">
+              <span>Location</span>
+              <a>Available Remotely · Worldwide</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form fade-in">
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project inquiry" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project or idea…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-logo">B<span>.</span>Mankw</span>
+      <p class="footer-text">© <span id="year"></span> Benedicta Mankw. Crafted with ❤️</p>
+      <div class="footer-socials">
+        <a href="https://github.com/benedictamankw18" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
