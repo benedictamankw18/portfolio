@@ -1,0 +1,1415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Benedict Amankwa Osei - Full Stack Developer and Cybersecurity Specialist portfolio."
+    />
+    <meta
+      name="keywords"
+      content="Benedict Amankwa, portfolio, web developer, cybersecurity, Ghana"
+    />
+    <meta name="author" content="Benedict Amankwa Osei" />
+    <title>Benedict Amankwa | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./logo.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      :root {
+        --bg-0: #f6f4ef;
+        --bg-1: #fffdf8;
+        --ink-0: #122117;
+        --ink-1: #2a3a2f;
+        --ink-2: #5d6b61;
+        --line: #d6d2c7;
+        --brand: #15664f;
+        --brand-strong: #0e4d3c;
+        --accent: #e08f2f;
+        --card: rgba(255, 255, 255, 0.75);
+        --shadow: 0 18px 45px rgba(21, 102, 79, 0.12);
+        --radius-xl: 22px;
+        --radius-lg: 16px;
+        --radius-md: 12px;
+        --max: 1140px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Outfit", "Segoe UI", sans-serif;
+        color: var(--ink-0);
+        background:
+          radial-gradient(
+            circle at 16% 12%,
+            rgba(224, 143, 47, 0.18),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 90% 8%,
+            rgba(21, 102, 79, 0.2),
+            transparent 30%
+          ),
+          linear-gradient(165deg, var(--bg-0), var(--bg-1));
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      .grain {
+        pointer-events: none;
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.25;
+        background-image: radial-gradient(
+          rgba(18, 33, 23, 0.08) 0.7px,
+          transparent 0.7px
+        );
+        background-size: 3px 3px;
+      }
+
+      .container {
+        width: min(var(--max), 92vw);
+        margin-inline: auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(12px);
+        background: rgba(255, 253, 248, 0.76);
+        border-bottom: 1px solid rgba(214, 210, 199, 0.8);
+      }
+
+      .nav-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+        gap: 16px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: var(--ink-0);
+        font-family: "Sora", "Segoe UI", sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+      }
+
+      .brand img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid rgba(21, 102, 79, 0.35);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        font-weight: 500;
+      }
+
+      .nav-links a {
+        color: var(--ink-1);
+        text-decoration: none;
+        position: relative;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, var(--brand), var(--accent));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.25s ease;
+      }
+
+      .nav-links a:hover::after,
+      .nav-links a:focus-visible::after {
+        transform: scaleX(1);
+      }
+
+      .menu-btn {
+        display: none;
+        background: none;
+        border: 0;
+        font-size: 1.35rem;
+        color: var(--ink-0);
+        cursor: pointer;
+      }
+
+      .hero {
+        padding: 84px 0 50px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 36px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(21, 102, 79, 0.28);
+        background: rgba(255, 255, 255, 0.62);
+        color: var(--brand-strong);
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 18px;
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-family: "Sora", "Segoe UI", sans-serif;
+        font-size: clamp(2rem, 5.8vw, 4rem);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+      }
+
+      .hero .accent {
+        color: var(--brand-strong);
+        text-decoration: underline;
+        text-decoration-color: rgba(224, 143, 47, 0.7);
+        text-underline-offset: 8px;
+        text-decoration-thickness: 3px;
+      }
+
+      .type-line {
+        margin: 18px 0 14px;
+        font-size: clamp(1rem, 2.4vw, 1.25rem);
+        color: var(--ink-1);
+        min-height: 1.7em;
+        font-weight: 500;
+      }
+
+      .type-line strong {
+        color: var(--brand-strong);
+      }
+
+      .lead {
+        max-width: 64ch;
+        color: var(--ink-2);
+        margin-bottom: 22px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 28px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 0;
+        border-radius: 12px;
+        font: inherit;
+        font-weight: 600;
+        padding: 12px 18px;
+        text-decoration: none;
+        cursor: pointer;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          background-color 0.25s ease;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--brand), #1f7b61);
+        color: #fff;
+        box-shadow: 0 10px 24px rgba(21, 102, 79, 0.24);
+      }
+
+      .btn-primary:hover,
+      .btn-primary:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 30px rgba(21, 102, 79, 0.3);
+      }
+
+      .btn-outline {
+        border: 1px solid rgba(21, 102, 79, 0.34);
+        background: rgba(255, 255, 255, 0.75);
+        color: var(--ink-1);
+      }
+
+      .btn-outline:hover,
+      .btn-outline:focus-visible {
+        background: rgba(21, 102, 79, 0.07);
+        transform: translateY(-2px);
+      }
+
+      .hero-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        max-width: 580px;
+      }
+
+      .metric {
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        background: var(--card);
+        padding: 14px;
+        backdrop-filter: blur(5px);
+      }
+
+      .metric strong {
+        display: block;
+        font-family: "Sora", "Segoe UI", sans-serif;
+        font-size: 1.2rem;
+        color: var(--brand-strong);
+      }
+
+      .metric span {
+        color: var(--ink-2);
+        font-size: 0.92rem;
+      }
+
+      .portrait {
+        position: relative;
+        width: min(100%, 420px);
+        margin-inline: auto;
+        border-radius: 28px;
+        overflow: hidden;
+        border: 1px solid rgba(214, 210, 199, 0.9);
+        box-shadow: var(--shadow);
+        transform: rotate(1.2deg);
+        transition: transform 0.45s ease;
+        background: #fff;
+      }
+
+      .portrait:hover {
+        transform: rotate(0deg) translateY(-4px);
+      }
+
+      .portrait img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        aspect-ratio: 4 / 5;
+      }
+
+      .portrait-badge {
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+        border-radius: 12px;
+        background: rgba(18, 33, 23, 0.85);
+        color: #fef8ef;
+        padding: 10px 12px;
+        font-size: 0.86rem;
+        line-height: 1.3;
+      }
+
+      section {
+        padding: 72px 0;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 24px;
+      }
+
+      .section-head h2 {
+        margin: 0;
+        font-family: "Sora", "Segoe UI", sans-serif;
+        font-size: clamp(1.5rem, 4vw, 2.35rem);
+        line-height: 1.2;
+      }
+
+      .section-head p {
+        margin: 0;
+        color: var(--ink-2);
+        max-width: 48ch;
+      }
+
+      .about-card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius-xl);
+        background: var(--card);
+        box-shadow: var(--shadow);
+        padding: 26px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+
+      .about-points {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .about-points li {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        color: var(--ink-1);
+      }
+
+      .about-points i {
+        color: var(--accent);
+        margin-top: 4px;
+      }
+
+      .about-mini-image img {
+        width: 100%;
+        border-radius: var(--radius-lg);
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border: 1px solid rgba(214, 210, 199, 0.95);
+      }
+
+      .skill-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        background: var(--card);
+        box-shadow: var(--shadow);
+        padding: 20px;
+      }
+
+      .panel h3 {
+        margin-top: 0;
+        margin-bottom: 14px;
+        font-family: "Sora", "Segoe UI", sans-serif;
+        font-size: 1.15rem;
+      }
+
+      .skill-item {
+        margin-bottom: 12px;
+      }
+
+      .skill-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.94rem;
+        color: var(--ink-1);
+        margin-bottom: 4px;
+      }
+
+      .track {
+        width: 100%;
+        height: 9px;
+        border-radius: 999px;
+        background: #e7e4db;
+        overflow: hidden;
+      }
+
+      .fill {
+        height: 100%;
+        width: 0;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--brand), var(--accent));
+        transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 10px;
+        border-radius: 10px;
+        border: 1px solid rgba(21, 102, 79, 0.24);
+        background: rgba(21, 102, 79, 0.06);
+        color: var(--ink-1);
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .timeline {
+        border-left: 3px solid rgba(21, 102, 79, 0.28);
+        margin-left: 10px;
+        padding-left: 28px;
+        display: grid;
+        gap: 18px;
+      }
+
+      .timeline-item {
+        position: relative;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        background: var(--card);
+        box-shadow: var(--shadow);
+        padding: 18px;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -36px;
+        top: 22px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--accent);
+        border: 2px solid #fff;
+        box-shadow: 0 0 0 3px rgba(224, 143, 47, 0.18);
+      }
+
+      .timeline-item small {
+        display: inline-block;
+        color: var(--brand-strong);
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      .timeline-item h3 {
+        margin: 0 0 4px;
+        font-family: "Sora", "Segoe UI", sans-serif;
+        font-size: 1.08rem;
+      }
+
+      .timeline-item p {
+        margin: 0;
+        color: var(--ink-2);
+      }
+
+      .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+
+      .filter-btn {
+        border: 1px solid rgba(21, 102, 79, 0.24);
+        background: rgba(255, 255, 255, 0.85);
+        color: var(--ink-1);
+        padding: 8px 12px;
+        border-radius: 999px;
+        cursor: pointer;
+        font: inherit;
+        font-size: 0.9rem;
+        font-weight: 600;
+        transition: all 0.2s ease;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover,
+      .filter-btn:focus-visible {
+        color: #fff;
+        background: var(--brand);
+        border-color: var(--brand);
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .project {
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        background: #fff;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.28s ease;
+      }
+
+      .project:hover {
+        transform: translateY(-4px);
+      }
+
+      .project img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .project-body {
+        padding: 14px;
+        display: grid;
+        gap: 10px;
+        flex: 1;
+      }
+
+      .project h3 {
+        margin: 0;
+        font-family: "Sora", "Segoe UI", sans-serif;
+        font-size: 1.02rem;
+        line-height: 1.35;
+      }
+
+      .project p {
+        margin: 0;
+        color: var(--ink-2);
+        font-size: 0.95rem;
+      }
+
+      .project-links {
+        margin-top: auto;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .mini {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+        border-radius: 10px;
+      }
+
+      .cert-strip {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(260px, 1fr);
+        gap: 14px;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        scroll-snap-type: x mandatory;
+      }
+
+      .cert-strip img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        scroll-snap-align: start;
+        background: #fff;
+      }
+
+      .contact-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .contact-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .contact-list li {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 11px;
+        background: rgba(255, 255, 255, 0.85);
+        color: var(--ink-1);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .contact-list a {
+        color: var(--brand-strong);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .form {
+        display: grid;
+        gap: 10px;
+      }
+
+      .form input,
+      .form textarea {
+        width: 100%;
+        font: inherit;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        padding: 11px 12px;
+        background: #fff;
+        color: var(--ink-0);
+      }
+
+      .form textarea {
+        min-height: 132px;
+        resize: vertical;
+      }
+
+      .footer {
+        padding: 26px 0 36px;
+        color: var(--ink-2);
+        font-size: 0.92rem;
+      }
+
+      .footer-grid {
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px 14px;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.55s ease,
+          transform 0.55s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .to-top {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 0;
+        background: var(--brand-strong);
+        color: #fff;
+        box-shadow: 0 12px 24px rgba(18, 33, 23, 0.25);
+        cursor: pointer;
+        display: none;
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .about-card,
+        .contact-wrap,
+        .skill-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .project-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .portrait {
+          max-width: 380px;
+        }
+
+        .section-head {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .nav-links {
+          display: none;
+        }
+
+        .menu-btn {
+          display: inline-flex;
+        }
+
+        .nav-links.mobile-open {
+          display: grid;
+          position: absolute;
+          top: 72px;
+          left: 0;
+          right: 0;
+          padding: 16px 4vw 18px;
+          background: rgba(255, 253, 248, 0.98);
+          border-bottom: 1px solid var(--line);
+          gap: 10px;
+        }
+
+        .hero {
+          padding-top: 60px;
+        }
+
+        .hero-metrics {
+          grid-template-columns: 1fr;
+        }
+
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        section {
+          padding: 56px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home">
+          <img src="./IMG_9346 (2).jpg" alt="Benedict portrait" />
+          <span>Benedict Amankwa</span>
+        </a>
+        <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid reveal">
+          <div>
+            <span class="eyebrow"
+              ><i class="fa fa-shield"></i> Full Stack + Security Focus</span
+            >
+            <h1>
+              Building practical
+              <span class="accent">digital products</span> with clear design and
+              secure foundations.
+            </h1>
+            <p class="type-line">
+              I am a <strong id="typing-role">Web Developer</strong>
+            </p>
+            <p class="lead">
+              I am Benedict Amankwa Osei, an ICT Education student and builder
+              focused on web development, system thinking, and cybersecurity. I
+              enjoy shipping useful projects that are simple for users and
+              robust under the hood.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects"
+                ><i class="fa fa-folder-open"></i> View Projects</a
+              >
+              <a class="btn btn-outline" href="#contact"
+                ><i class="fa fa-envelope"></i> Contact Me</a
+              >
+            </div>
+            <div class="hero-metrics">
+              <div class="metric">
+                <strong>4+ Years</strong><span>Hands-on learning</span>
+              </div>
+              <div class="metric">
+                <strong>50+ Builds</strong><span>Academic and personal</span>
+              </div>
+              <div class="metric">
+                <strong>Remote Ready</strong><span>Based in Ghana</span>
+              </div>
+            </div>
+          </div>
+          <aside class="portrait" aria-label="Profile image card">
+            <img
+              src="./IMG_9346 (2).jpg"
+              alt="Benedict Amankwa profile photo"
+            />
+            <div class="portrait-badge">
+              Open for internships and junior developer roles
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container reveal">
+          <div class="section-head">
+            <h2>About Me</h2>
+            <p>
+              I blend technical curiosity with practical delivery, aiming to
+              build dependable software that solves real user problems.
+            </p>
+          </div>
+          <article class="about-card">
+            <div>
+              <p>
+                I am currently pursuing a BSc in ICT Education at the University
+                of Education, Winneba (2023 to 2027). I actively learn through
+                projects in JavaScript, Java, Python, and database systems while
+                growing my cybersecurity skills.
+              </p>
+              <ul class="about-points">
+                <li>
+                  <i class="fa fa-graduation-cap" aria-hidden="true"></i
+                  ><span
+                    >BSc ICT Education, University of Education, Winneba</span
+                  >
+                </li>
+                <li>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i
+                  ><span>Ghana, available for remote collaboration</span>
+                </li>
+                <li>
+                  <i class="fa fa-envelope" aria-hidden="true"></i
+                  ><span>benedictamankwa18@gmail.com</span>
+                </li>
+              </ul>
+            </div>
+            <div class="about-mini-image">
+              <img src="./progromming (1).jpeg" alt="Programming workspace" />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="container reveal">
+          <div class="section-head">
+            <h2>Skills</h2>
+            <p>
+              Technical depth plus teamwork, communication, and adaptability.
+            </p>
+          </div>
+          <div class="skill-grid">
+            <article class="panel">
+              <h3><i class="fa fa-code" aria-hidden="true"></i> Technical</h3>
+              <div class="skill-item">
+                <div class="skill-row">
+                  <span>JavaScript and TypeScript</span><span>90%</span>
+                </div>
+                <div class="track">
+                  <div class="fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-row">
+                  <span>React and Next.js</span><span>85%</span>
+                </div>
+                <div class="track">
+                  <div class="fill" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-row">
+                  <span>Python and Django</span><span>80%</span>
+                </div>
+                <div class="track">
+                  <div class="fill" data-width="80"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-row">
+                  <span>Java and Desktop Apps</span><span>75%</span>
+                </div>
+                <div class="track">
+                  <div class="fill" data-width="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-row">
+                  <span>Database Systems</span><span>85%</span>
+                </div>
+                <div class="track">
+                  <div class="fill" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-row">
+                  <span>Cybersecurity Practice</span><span>70%</span>
+                </div>
+                <div class="track">
+                  <div class="fill" data-width="70"></div>
+                </div>
+              </div>
+            </article>
+            <article class="panel">
+              <h3>
+                <i class="fa fa-users" aria-hidden="true"></i> Soft Skills and
+                Tools
+              </h3>
+              <div class="tag-list" style="margin-bottom: 14px">
+                <span class="tag">Problem Solving</span>
+                <span class="tag">Communication</span>
+                <span class="tag">Teamwork</span>
+                <span class="tag">Leadership</span>
+                <span class="tag">Critical Thinking</span>
+                <span class="tag">Adaptability</span>
+                <span class="tag">Time Management</span>
+                <span class="tag">Creativity</span>
+              </div>
+              <div class="tag-list">
+                <span class="tag">Git and GitHub</span>
+                <span class="tag">AWS and Azure</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Figma</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">REST APIs</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="container reveal">
+          <div class="section-head">
+            <h2>Experience and Education</h2>
+            <p>My learning path and practical project journey.</p>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <small>2023 - 2027</small>
+              <h3>Bachelor of Science (ICT Education)</h3>
+              <p>
+                University of Education, Winneba. Focus on software development,
+                cybersecurity, and educational technology.
+              </p>
+            </article>
+            <article class="timeline-item">
+              <small>2020 - 2023</small>
+              <h3>General Arts</h3>
+              <p>Akwamuman Senior High School, Akosombo.</p>
+            </article>
+            <article class="timeline-item">
+              <small>2021 - Present</small>
+              <h3>Self-Taught Developer</h3>
+              <p>
+                Built practical apps across web, desktop, and security-focused
+                experiments through continuous learning.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container reveal">
+          <div class="section-head">
+            <h2>Featured Projects</h2>
+            <p>
+              Selected builds across software engineering, web, and security.
+            </p>
+          </div>
+          <div class="filters" id="filters"></div>
+          <div class="project-grid" id="project-grid">
+            <article class="project" data-category="desktop database">
+              <img
+                src="./VisualBasicNET.jpg"
+                alt="Restaurant management project"
+              />
+              <div class="project-body">
+                <h3>Restaurant Management System</h3>
+                <p>
+                  Visual Basic app for menu handling, order processing, and
+                  receipt generation.
+                </p>
+                <div class="project-links">
+                  <a
+                    class="btn btn-outline mini"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://github.com/benedictamankw18/Fast-Food-Restaurant"
+                    ><i class="fa fa-github"></i> Code</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project" data-category="database security">
+              <img src="./visa.png" alt="Visa application project" />
+              <div class="project-body">
+                <h3>Visa Application System</h3>
+                <p>
+                  Secure application tracking workflow with authentication and
+                  status management.
+                </p>
+                <div class="project-links">
+                  <a
+                    class="btn btn-outline mini"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://github.com/benedictamankw18/visa-Application"
+                    ><i class="fa fa-github"></i> Code</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project" data-category="desktop java">
+              <img src="./java.jpeg" alt="Employee management project" />
+              <div class="project-body">
+                <h3>Employee Entry Management</h3>
+                <p>
+                  Java desktop application using file operations and
+                  administrative controls.
+                </p>
+                <div class="project-links">
+                  <a
+                    class="btn btn-outline mini"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://github.com/benedictamankw18/employee-management"
+                    ><i class="fa fa-github"></i> Code</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project" data-category="web frontend">
+              <img src="./website.jpg" alt="Tech blog project" />
+              <div class="project-body">
+                <h3>Tech Blog 2023</h3>
+                <p>
+                  Responsive website presenting technology trends and modern
+                  visual structure.
+                </p>
+                <div class="project-links">
+                  <a
+                    class="btn btn-outline mini"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://github.com/benedictamankw18/2023_tech"
+                    ><i class="fa fa-github"></i> Code</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project" data-category="security">
+              <img src="./cybersecurity.jpg" alt="Cybersecurity portfolio" />
+              <div class="project-body">
+                <h3>Cybersecurity Portfolio</h3>
+                <p>
+                  Projects around vulnerability assessment, penetration testing,
+                  and defensive analysis.
+                </p>
+                <div class="project-links">
+                  <a
+                    class="btn btn-outline mini"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://github.com/benedictamankw18/cybersecurity-portfolio"
+                    ><i class="fa fa-github"></i> Portfolio</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project" data-category="web javascript">
+              <img src="./javascript.jpeg" alt="JavaScript apps project" />
+              <div class="project-body">
+                <h3>JavaScript Applications</h3>
+                <p>
+                  Interactive browser projects showcasing modern ES6+ and DOM
+                  interaction patterns.
+                </p>
+                <div class="project-links">
+                  <a
+                    class="btn btn-outline mini"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://github.com/benedictamankw18/javascript-projects"
+                    ><i class="fa fa-github"></i> Code</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="certifications">
+        <div class="container reveal">
+          <div class="section-head">
+            <h2>Certifications</h2>
+            <p>Recent learning achievements from SoloLearn.</p>
+          </div>
+          <div class="cert-strip" aria-label="Certificate gallery">
+            <img
+              src="https://api2.sololearn.com/v2/certificates/CC-YTXF1PDX/image/png?t=638454613578363730"
+              alt="SoloLearn certificate 1"
+              loading="lazy"
+            />
+            <img
+              src="https://api2.sololearn.com/v2/certificates/CC-JK78XAQX/image/png?t=638454613578363600"
+              alt="SoloLearn certificate 2"
+              loading="lazy"
+            />
+            <img
+              src="https://api2.sololearn.com/v2/certificates/CC-QZZSXD6E/image/png?t=638519040990405980"
+              alt="SoloLearn certificate 3"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container reveal">
+          <div class="section-head">
+            <h2>Contact</h2>
+            <p>
+              Open to internships, collaborations, and development
+              opportunities.
+            </p>
+          </div>
+          <div class="contact-wrap">
+            <article class="panel">
+              <ul class="contact-list">
+                <li>
+                  <i class="fa fa-envelope"></i
+                  ><a href="mailto:benedictamankwa18@gmail.com"
+                    >benedictamankwa18@gmail.com</a
+                  >
+                </li>
+                <li>
+                  <i class="fa fa-phone"></i
+                  ><a href="tel:+233594500785">+233 59 450 0785</a>
+                </li>
+                <li>
+                  <i class="fa fa-whatsapp"></i
+                  ><a
+                    href="https://wa.me/233594500785"
+                    target="_blank"
+                    rel="noopener"
+                    >WhatsApp</a
+                  >
+                </li>
+                <li>
+                  <i class="fa fa-telegram"></i
+                  ><a
+                    href="https://t.me/n3thunt3rsocial"
+                    target="_blank"
+                    rel="noopener"
+                    >Telegram</a
+                  >
+                </li>
+                <li>
+                  <i class="fa fa-linkedin"></i
+                  ><a
+                    href="https://www.linkedin.com/in/benedict-amankwa-991a5635b/?originalSubdomain=gh"
+                    target="_blank"
+                    rel="noopener"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <i class="fa fa-github"></i
+                  ><a
+                    href="https://github.com/benedictamankw18"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                  >
+                </li>
+              </ul>
+            </article>
+            <article class="panel">
+              <form id="contact-form" class="form">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required />
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" />
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button class="btn btn-primary" type="submit">
+                  <i class="fa fa-send"></i> Send Message
+                </button>
+              </form>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <span>© 2026 Benedict Amankwa Osei</span>
+        <span>Designed for clarity, speed, and impact.</span>
+      </div>
+    </footer>
+
+    <button class="to-top" id="to-top" aria-label="Scroll to top">
+      <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <script>
+      (function () {
+        const roles = [
+          "Web Developer",
+          "UI and UX Enthusiast",
+          "Cybersecurity Specialist",
+          "Full Stack Builder",
+          "Problem Solver",
+        ];
+
+        const roleEl = document.getElementById("typing-role");
+        let roleIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        function typeRole() {
+          const text = roles[roleIndex];
+          roleEl.textContent = deleting
+            ? text.slice(0, --charIndex)
+            : text.slice(0, ++charIndex);
+
+          if (!deleting && charIndex === text.length) {
+            deleting = true;
+            setTimeout(typeRole, 1300);
+            return;
+          }
+
+          if (deleting && charIndex === 0) {
+            deleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+          }
+
+          setTimeout(typeRole, deleting ? 45 : 85);
+        }
+
+        typeRole();
+
+        const menuBtn = document.getElementById("menu-btn");
+        const navLinks = document.getElementById("nav-links");
+        menuBtn.addEventListener("click", function () {
+          navLinks.classList.toggle("mobile-open");
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+          link.addEventListener("click", function () {
+            navLinks.classList.remove("mobile-open");
+          });
+        });
+
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                entry.target.querySelectorAll(".fill").forEach(function (bar) {
+                  bar.style.width = bar.getAttribute("data-width") + "%";
+                });
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 },
+        );
+
+        reveals.forEach(function (item) {
+          observer.observe(item);
+        });
+
+        const cards = Array.from(document.querySelectorAll(".project"));
+        const filtersHost = document.getElementById("filters");
+        const allCategories = new Set(["all"]);
+        cards.forEach(function (card) {
+          card.dataset.category.split(" ").forEach(function (part) {
+            allCategories.add(part);
+          });
+        });
+
+        function renderFilters() {
+          Array.from(allCategories).forEach(function (category, idx) {
+            const btn = document.createElement("button");
+            btn.className = "filter-btn" + (idx === 0 ? " active" : "");
+            btn.type = "button";
+            btn.textContent =
+              category.charAt(0).toUpperCase() + category.slice(1);
+            btn.dataset.filter = category;
+            filtersHost.appendChild(btn);
+          });
+        }
+
+        function applyFilter(category) {
+          cards.forEach(function (card) {
+            const match =
+              category === "all" || card.dataset.category.includes(category);
+            card.style.display = match ? "flex" : "none";
+          });
+        }
+
+        renderFilters();
+        filtersHost.addEventListener("click", function (event) {
+          const btn = event.target.closest(".filter-btn");
+          if (!btn) {
+            return;
+          }
+
+          filtersHost.querySelectorAll(".filter-btn").forEach(function (item) {
+            item.classList.remove("active");
+          });
+
+          btn.classList.add("active");
+          applyFilter(btn.dataset.filter);
+        });
+
+        const toTop = document.getElementById("to-top");
+        window.addEventListener("scroll", function () {
+          toTop.style.display = window.scrollY > 450 ? "inline-flex" : "none";
+        });
+
+        toTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        const form = document.getElementById("contact-form");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          const data = new FormData(form);
+          const name = data.get("name");
+          const email = data.get("email");
+          const subject = data.get("subject") || "Portfolio Contact";
+          const message = data.get("message");
+          const body = encodeURIComponent(
+            "Name: " + name + "\nEmail: " + email + "\n\n" + message,
+          );
+          const mailto =
+            "mailto:benedictamankwa18@gmail.com?subject=" +
+            encodeURIComponent(subject) +
+            "&body=" +
+            body;
+          window.location.href = mailto;
+        });
+      })();
+    </script>
+  </body>
+</html>
